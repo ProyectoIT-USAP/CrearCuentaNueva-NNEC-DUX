@@ -1,0 +1,84 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrearCuentaNueva"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Name="frmLogin1" x:Class="CrearCuentaNueva.frmLogin"
+        mc:Ignorable="d"
+        Title="Acceso" Height="234.958" Width="402.333"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  Loaded="FrmLogin1_Loaded">
+
+
+    <Grid x:Name="grdLogin" Margin="0,0,0,-2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="239*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="402" Grid.ColumnSpan="2" Background="#FF353C83">
+            <Grid.Resources>
+                <Color x:Key="Color1">#FFF5371B</Color>
+            </Grid.Resources>
+            <Label x:Name="Acceso" Content="Acceso de Admisión" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="222" AutomationProperties.Name="DFSDF" Foreground="#DDF5EAEA" Margin="4,1,0,0" FontWeight="Medium"/>
+            <Button x:Name="BtnClose" Margin="350,1,0,1" Background="{x:Null}" Height="Auto" BorderBrush="{x:Null}" Click="BtnClose_Click">
+                <materialDesign:PackIcon Kind="CloseBox" Height="20" Width="23" Foreground="#DDFDF8F8" RenderTransformOrigin="-15.565,0.435" VerticalAlignment="Bottom" />
+            </Button>
+        </Grid>
+
+        <ComboBox x:Name="cbxBasedeDatos"
+         materialDesign:HintAssist.Hint="Base de Datos"
+         materialDesign:HintAssist.Foreground="#FF353C83"
+         materialDesign:TextFieldAssist.UnderlineBrush="#FF353C83"         
+         Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="39,41,17,0" 
+                  VerticalAlignment="Top" Grid.Column="1" Height="36"    />
+
+        <!--<ComboBoxItem Content="NNEC"/>-->
+        <!--<ComboBoxItem Content="DUX"/>-->
+        <TextBox x:Name="txtUsuario" 
+          materialDesign:HintAssist.Foreground="#FF353C83"
+          materialDesign:TextFieldAssist.UnderlineBrush="#FF353C83"       
+          Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="39,94,0,0" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Width="183" TabIndex="0" Grid.Column="1" Text="jessica.garcia">
+            <materialDesign:HintAssist.Hint>
+                <StackPanel
+              Orientation="Horizontal"
+              Margin="-2 0 0 0">
+                    <TextBlock><Run Text="Usuario"/></TextBlock>
+                </StackPanel>
+            </materialDesign:HintAssist.Hint>
+        </TextBox>
+        <!--Password="Temporal+1"-->
+        <PasswordBox
+          x:Name="txtContraseña" 
+          Margin="39,146,0,0" HorizontalAlignment="Left" Width="183" Height="35" VerticalAlignment="Top"  Password="Betzabe21991"
+          materialDesign:HintAssist.Hint="Contraseña"
+         materialDesign:HintAssist.Foreground="#FF353C83"
+          materialDesign:TextFieldAssist.UnderlineBrush="#FF353C83"
+          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" KeyUp="TxtContraseña_KeyUp" TabIndex="1" Grid.Column="1"/>
+        <Button x:Name="btnAcceso" TabIndex="2" Style="{StaticResource MaterialDesignRaisedLightButton}" 
+                ToolTip="Iniciar Sesion" Height="25" Margin="57,192,59,0" VerticalAlignment="Top" Click="BtnAcceso_Click" Content="Acceder" Background="#FF353C83" BorderBrush="#FF353C83" Foreground="White" Grid.Column="1"/>
+
+        <materialDesign:PackIcon Kind="UserKeyOutline" Height="16" VerticalAlignment="Top" Margin="19,114,0,0" HorizontalAlignment="Left" Width="16" Grid.Column="1" />
+        <materialDesign:PackIcon Kind="KeyVariant" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="19,165,0,0" Grid.Column="1" />
+        <Image HorizontalAlignment="Left" Height="109" Margin="33,72,0,0" VerticalAlignment="Top" Width="102" Source="USAP-DUX-LOGO-ADMISION.png" Stretch="Fill"/>
+
+        <ProgressBar x:Name="ProgressBar" IsIndeterminate="True" Margin="0,228,0,4" Grid.ColumnSpan="2" Height="Auto" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed"   >
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+
+    </Grid>
+</Window>

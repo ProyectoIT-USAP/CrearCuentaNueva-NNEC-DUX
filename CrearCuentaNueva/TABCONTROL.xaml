@@ -1,0 +1,102 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrearCuentaNueva" 
+        xmlns:loading="clr-namespace:LoadingIndicators.WPF;assembly=LoadingIndicators.WPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        x:Class="CrearCuentaNueva.TABCONTROL"
+        mc:Ignorable="d"
+        Title="TABCONTROL" Height="550" Width="992">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingWave.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingThreeDots.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingFlipPlane.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingPulse.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles/LoadingDoubleBounce.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Colors.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/LoadingIndicators.WPF;component/Styles.xaml"/>
+
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+
+
+        <TabControl HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="984" >
+            <TabItem x:Name="TabItem1" Header="TabItem1" IsVisibleChanged="TabItem1_IsVisibleChanged">
+                <Grid x:Name="GTabItem1" Background="#FFE5E5E5" Width="978" Margin="0,8,0,-8">
+                    <TextBox HorizontalAlignment="Left" Height="60" Margin="128,111,0,0" TextWrapping="Wrap" Text="TAB UNO" VerticalAlignment="Top" Width="345" />
+
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItem2" Header="TabItem2" IsVisibleChanged="TabItem2_IsVisibleChanged" >
+                <Grid x:Name="GTabItem2" Background="#FFE5E5E5" Margin="0,8,0,-8">
+                    <TextBlock HorizontalAlignment="Left" Height="59" Margin="227,118,0,0" TextWrapping="Wrap" Text="TAB2" VerticalAlignment="Top" Width="344"/>
+                </Grid>
+            </TabItem>
+            <TabItem  x:Name="TabItem3" Header="TabItem3" IsVisibleChanged="TabItem3_IsVisibleChanged"  >
+                <Grid x:Name="GTabItem3" Background="#FFE5E5E5" Margin="0,8,0,-8" Width="987">
+                    <TextBlock HorizontalAlignment="Left" Height="59" Margin="227,118,0,0" TextWrapping="Wrap" Text="TAB3" VerticalAlignment="Top" Width="344"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItem4" Header="TabItem4" IsVisibleChanged="TabItem4_IsVisibleChanged"  >
+                <Grid x:Name="GTabItem4" Background="#FFE5E5E5" Margin="0,8,0,-8">
+                    <TextBlock HorizontalAlignment="Left" Height="59" Margin="227,118,0,0" TextWrapping="Wrap" Text="TAB4" VerticalAlignment="Top" Width="344"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItem5" Header="TabItem5" IsVisibleChanged="TabItem5_IsVisibleChanged">
+                <Grid x:Name="GTabItem5" Background="#FFE5E5E5" Margin="0,8,0,-8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="111*"/>
+                        <ColumnDefinition Width="881*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" Height="59" Margin="116.319,118,0,0" TextWrapping="Wrap" Text="TAB5" VerticalAlignment="Top" Width="344" Grid.Column="1"/>
+                    <Button Content="LOADING" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="46,261,0,0" VerticalAlignment="Top" Width="174" Click="Button_Click"/>
+
+                    <!--<ProgressBar x:Name="CircularProgressBar"   Style="{StaticResource MaterialDesignCircularProgressBar}"  Value="50"  IsIndeterminate="True"
+                                 Height="Auto" Margin="46,191,22,156" Width="Auto"  />
+                    <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}"  Value="0"  IsIndeterminate="True" Grid.Column="1" Margin="463,191,329,115"
+                                 Height="Auto" Width="Auto" Foreground="#FF2A1F99" />-->
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <!--<Syncfusion:SfCircularProgressBar Progress="80" >
+            <Syncfusion:SfCircularProgressBar.RangeColors>
+                <Syncfusion:RangeColorCollection>
+                    <Syncfusion:RangeColor Color="BlanchedAlmond" Start="5" End="30"/>
+                    <Syncfusion:RangeColor Color="Coral" Start="30" End="60"/>
+                    <Syncfusion:RangeColor Color="Crimson" Start="60" End="100"/>
+                </Syncfusion:RangeColorCollection>
+          </Syncfusion:SfCircularProgressBar.RangeColors>
+        </Syncfusion:SfCircularProgressBar>-->
+
+
+        <DockPanel x:Name="DockPanel" HorizontalAlignment="Left" LastChildFill="False"  VerticalAlignment="Top" Height="519" Width="990" Margin="0,0,-23,0" 
+                   Visibility="Collapsed" >
+           <DockPanel.Background>
+                <SolidColorBrush Color="Black" Opacity="0.2"/>
+           </DockPanel.Background>
+            
+           <loading:LoadingIndicator x:Name="Loading" SpeedRatio="1" IsActive="True"  Style="{DynamicResource LoadingIndicatorArcsStyle}" 
+            Foreground="#CC111ADA" Margin="480,0,0,65">
+             <loading:LoadingIndicator.RenderTransform>
+               <ScaleTransform ScaleX="1.3" ScaleY="1.3"></ScaleTransform>
+             </loading:LoadingIndicator.RenderTransform>
+           </loading:LoadingIndicator>
+            
+        </DockPanel>
+
+    </Grid>
+
+</Window>

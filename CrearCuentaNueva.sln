@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrearCuentaNueva", "CrearCuentaNueva\CrearCuentaNueva.csproj", "{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador Crear Cuenta(Admision)", "Instalador Crear Cuenta(Admision)V2.2\Instalador Crear Cuenta(Admision)V2.2.vdproj", "{9A1D7E6E-D599-4BCA-AA1B-A728AA37F13E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}.Debug|Default.ActiveCfg = Debug|Any CPU
+		{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}.Debug|Default.Build.0 = Debug|Any CPU
+		{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}.Release|Default.ActiveCfg = Release|Any CPU
+		{0E6F1EEA-B38F-4955-B0FE-CAE06EC717F8}.Release|Default.Build.0 = Release|Any CPU
+		{9A1D7E6E-D599-4BCA-AA1B-A728AA37F13E}.Debug|Any CPU.ActiveCfg = Debug
+		{9A1D7E6E-D599-4BCA-AA1B-A728AA37F13E}.Debug|Default.ActiveCfg = Debug
+		{9A1D7E6E-D599-4BCA-AA1B-A728AA37F13E}.Debug|Default.Build.0 = Debug
+		{9A1D7E6E-D599-4BCA-AA1B-A728AA37F13E}.Release|Any CPU.ActiveCfg = Release
+		{9A1D7E6E-D599-4BCA-AA1B-A728AA37F13E}.Release|Any CPU.Build.0 = Release
+		{9A1D7E6E-D599-4BCA-AA1B-A728AA37F13E}.Release|Default.ActiveCfg = Release
+		{9A1D7E6E-D599-4BCA-AA1B-A728AA37F13E}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BE61041-81FB-4112-A3DF-2B573BA12548}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+	EndGlobalSection
+EndGlobal

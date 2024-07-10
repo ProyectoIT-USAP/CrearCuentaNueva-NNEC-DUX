@@ -1,0 +1,35 @@
+﻿<Window x:Class="CrearCuentaNueva.frmImgDocError"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrearCuentaNueva"
+        mc:Ignorable="d"
+        Title="Documento" Height="499.278" Width="603.844"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="UltraBold"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto" 
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="Times New Roman" WindowStyle="SingleBorderWindow" ResizeMode="CanResize" 
+        WindowStartupLocation="CenterScreen" >
+
+
+    <Grid >
+        <GroupBox Style="{StaticResource MaterialDesignCardGroupBox }" Margin="16,16,17,16" >
+            <GroupBox.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Width="{Binding ElementName=GroupBox, Path=ActualWidth}" >
+                        <Label Content="{Binding}" HorizontalAlignment="Stretch" Background="#FF070096" Grid.Column="0" Height="18" Margin="-10" Foreground="White"/>
+                    </Grid>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
+
+
+            <Image Height="100" Margin="0,125,0,0" VerticalAlignment="Top" Width="100" Source="ImgDocument.ico" />
+
+        </GroupBox>
+
+    </Grid>
+</Window>
